@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import axios, { type AxiosPromise } from "axios"
-import type { FoodData } from "../interface/FoodData";
+import type { FoodData } from '../interface/FoodData';
 
-const API_URL = 'http://localhost:8080'
+const API_URL = 'http://localhost:8080';
 
 const fetchData = async (): AxiosPromise<FoodData[]> => {
     const response = axios.get(API_URL + '/food');
@@ -13,11 +13,11 @@ export function useFoodData(){
     const query = useQuery({
         queryFn: fetchData,
         queryKey: ['food-data'],
-        retry: 2   
+        retry: 2
     })
 
-    return{
+    return {
         ...query,
         data: query.data?.data
     }
-}   
+}
