@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  box-sizing: border-box;
+}
+
+.container h1 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30x;
+}
+  
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+  gap: 16px;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+}
+  
+.container button {
+    background-color: #0275d8;
+    color: white;
+    font-weight: bold;
+    position: fixed;
+    bottom: 16px;
+    right: 24px;
+    transition: all 0.1s linear 0.1s;
+}
+  
+.container button:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 7px 0px;
+    transform: scale(1.1);
+}
+  
